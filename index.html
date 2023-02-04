@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css" >
+  <script defer src="app.js">app.js</script>
+</head>
+<body>
+  <div class="flex-container">
+    <div class="title"><h1>SCETCH <span>PAD</span></h1></div>
+    <div class="mode"><span id="md">Mode: </span> Coloring</div>
+    <div class="content">
+      <div class="board"></div>
+      <div class="buttons">
+        <button class="btn-b" onclick= "colorChange('black')">Black</button>
+        <button class="btn-g" onclick= "colorChange('grey')">Grey</button>
+        <button class="btn-e" onclick= "colorChange ('white')">Erase</button>
+        <button class="btn-r" onclick="colorChange('random')">Random</button>
+        <button class="btn-re" onclick="resetBoard()">Reset</button>
+      </div>
+      <div class="input-div">
+        <input class="input-field" type="text" 
+        placeholder="size of board" 
+        value="16"
+        onchange="changeSize(this.value)" />
+        <button class="btn-size">set size</button>
+      </div>
+      <div class="error">
+        Input must be between 2 and 100</div>
+    </div>
+  </div>
+</body>
+</html>
